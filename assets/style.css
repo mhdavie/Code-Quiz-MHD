@@ -9,7 +9,7 @@
     border: 1px solid purple;
 }
 
-#startbtn {
+#timerstart{
     background-color: purple;
     margin-left: 33%;
     padding: 15px 32px;
@@ -22,8 +22,12 @@
 margin: 20px;
 }
 
-#currentTime {
+#timer {
 float: right;
+height: 10px;
+padding: 10px;
+padding-right: 10px;
+background: #89d1ee;
 }
 
 #goBack {
