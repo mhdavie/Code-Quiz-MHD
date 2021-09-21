@@ -89,3 +89,22 @@ listItem.addEventListener("click", (compare));
 })
 }
 
+//create attributes - compare choices w/ answers 
+
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var creatDiv = document.createElement("div")
+        creatDiv.setAttribute("id", "creatDiv")
+
+        //if the answer is correct
+
+        if (element.textContent ==questions[questionIndex].answer){
+            score++;
+            alert = "Correct! The answer is:  " + questionIndex[questionIndex].answer
+           //if the answer is wrong
+         }    else{
+             secondsLeft = secondsLeft -penalty;
+             alert = "Wrong the correct anwser is : " + questionIndex[questionIndex].answer
