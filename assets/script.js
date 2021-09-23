@@ -47,18 +47,18 @@ var penalty = 10;
 
 var ulCreate = document.createElement("ul");
 
-//set interval
+//interval - timer
 
-timer.addEventListener("click", function (){
- if (holdInterval=== 0)
+timerCount.addEventListener("click", function (){
+ if (holdInterval === 0)
      holdInterval = setInterval(function() {
      secondsLeft--;
-     timerstart.textContent = "time: " + secondsLeft;
+     timerCount.textContent = "time: " + secondsLeft;
 
  if (secondsLeft <= 0){
      clearInterval(holdInterval);
      allDone();
-     timerstart.textContent = "Game Over"
+     timerCount.textContent = "Game Over"
      }    
 },1000);
  
@@ -66,11 +66,7 @@ timer.addEventListener("click", function (){
  
 });
 
-// print questions and choices to page:
 
-function render(questionIndex){
-    questionsDiv.innerHTML = "";
-    ulCreate.innerHTML = "";
     // For loops to loop through all info in array
     for (var i = 0; i < questions.length; i++) {
         // Appends question title only
@@ -87,7 +83,7 @@ questionsDiv.appendChild(ulCreate);
 ulCreate.appendChild(listItem);
 listItem.addEventListener("click", (compare));
 })
-}
+
 
 //create attributes - compare choices w/ answers 
 
@@ -180,38 +176,7 @@ createSubmit.textContent = "Submit";
 
 questionsDiv.appendChild(createSubmit);
 
-//  add event listner for highscores html
 
-
-createSubmit.addEventListener("click", function () {
-    var initials = createInput.value;
-
-
-    if (initials === null) {
-
-        console.log("No value entered!");
-
-    } else {
-        var finalScore = {
-            initials: initials,
-            score: timeRemaining
-        }
-        console.log(finalScore);
-        var allScores = localStorage.getItem("allScores");
-        if (allScores === null) {
-            allScores = [];
-        } else {
-            allScores = JSON.parse(allScores);
-        }
-        allScores.push(finalScore);
-        var newScore = JSON.stringify(allScores);
-        localStorage.setItem("allScores", newScore);
-        
-        
-// second html file
-        window.location.replace("highscores.html");
-    }
-});
 
 
 

@@ -4,13 +4,13 @@ This is a homework project for Trilogy Full-Stack Bootcamp.
 
 This is a quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
 
-This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template 
+This project has been deployed to GitHub Pages.
 
 ##Links
 
 Deployed GitHub Page:
 
-https://mhdavie.github.io/Code-Quiz-MHD/ 
+[https://mhdavie.github.io/Code-Quiz-MHD/]
 
 
 
@@ -41,4 +41,4 @@ THEN I can save my initials and my score
 
 ##  The following animation demonstrates the application functionality:
 
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](Assets/04-web-apis-homework-demo.gif)
